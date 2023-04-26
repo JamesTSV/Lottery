@@ -1,0 +1,21 @@
+import random
+import time
+print("Wellcome to our lucky lottery!")
+step1=int(input("Choose a range of numbers starting from: "))
+step2=int(input("and before: "))
+while step2<= step1:
+	step2=int(input("Choose another number"))
+step2+=1
+loto_numbers=list(range(step1,step2))
+more=""
+lucky="Your LUCKY numbers is: "
+while more !="n":
+		x=int(input("Enter quantity of numbers: "))
+		loto_num_rnd=random.sample(loto_numbers,x)
+		for i in loto_num_rnd:
+			time.sleep(2)
+			print(i)
+		time.sleep(1)
+		print(lucky,loto_num_rnd)
+		more=input("Generate one more time? y-Yes/n-No: ")
+print("\n","Good Luck!!!")
